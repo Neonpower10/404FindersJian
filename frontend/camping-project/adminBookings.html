@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Bookings</title>
+    <link rel="stylesheet" href="/styles/adminBookings.css"/>
+</head>
+<body>
+<div class="pageWrapper">
+    <main class="content">
+        <h1>Boekingen</h1>
+        <div class="filters">
+            <input type="text" id="search" placeholder="Zoek op naam..."/>
+        </div>
+        <div class="bookings-list" id="bookings-list">
+        </div>
+    </main>
+</div>
+</body>
+<script type="module" src="./src/layout/layout.js"></script>
+<script type="module" src="./src/design/themeLoader.js"></script>
+<script type="module" src="./src/booking/adminBookings.js"></script>
+</html>

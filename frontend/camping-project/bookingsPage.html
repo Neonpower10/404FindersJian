@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Boekingspagina</title>
+        <link rel="stylesheet" href="./public/styles/bookingsPage.css"/>
+    </head>
+    <body>
+        <main class="content">
+            <form class="bookingForm">
+                <ul class="progressSteps">
+                    <li class="active">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+
+                <section class="step step1 show">
+                    <section class="bookingOverview">
+                        <div class="campingInfo">
+                            <h2>Camping De Natuur</h2>
+                            <p>Limburg</p>
+                        </div>
+
+                        <div class="bookingDetails">
+                            <h3>Boeking details</h3>
+
+                            <div class="dateOfStay">
+                                <label for="dateFrom">Aankomstdatum:</label>
+                                <input type="date" id="dateFrom" name="dateFrom" required>
+                            </div>
+
+                            <div class="dateOfStay">
+                                <label for="dateTo">Vertrekdatum:</label>
+                                <input type="date" id="dateTo" name="dateTo" required>
+                            </div>
+
+                            <div class="campEq">
+                                <label for="campEq">Kampeermiddel:</label>
+                                <input type="text" id="campEq" name="campEq" placeholder="Caravan, tent, etc." required>
+                            </div>
+
+                            <div class="amountPeople">
+                                <label for="amountInput">Aantal personen:</label>
+                                <button type="button" id="minBtn" aria-label="Verminder aantal personen">-</button>
+                                <span id="amountInput">1</span>
+                                <button type="button" id="plusBtn" aria-label="Verhoog aantal personen">+</button>
+                            </div>
+                        </div>
+
+                        <div class="costOverview">
+                            <h3>Kostenoverzicht</h3>
+
+                            <ul class="costList">
+                                <li>Prijs per nacht: € <span id="pricePerNight">0</span></li>
+                                <li>Aantal nachten: <span id="amountNights">0</span></li>
+                                <li>Aantal personen: <span id="amountPeople">1</span></li>
+                                <li>Prijs per persoon: € <span id="pricePerPerson">0</span></li>
+                            </ul>
+                            <h2>Totaal: € <span id="totalPrice">0</span></h2>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="step step2">
+                    <div class="personDataForm">
+                        <h2>Persoonlijke gegevens</h2>
+
+                        <fieldset class="askGender">
+                            <legend>Geslacht</legend>
+                            <label><input type="radio" name="geslacht" value="Meneer" required> Meneer</label>
+                            <label><input type="radio" name="geslacht" value="Mevrouw" required> Mevrouw</label>
+                            <label><input type="radio" name="geslacht" value="Anders" required> Anders</label>
+                        </fieldset>
+
+                        <div class="personDataInput">
+                            <label for="firstName">Voornaam</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Voornaam" required>
+
+                            <label for="lastName">Achternaam</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Achternaam" required>
+
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="email@email.com" required>
+
+                            <label for="phoneNumber">Telefoonnummer</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="0612345678" required>
+                        </div>
+
+                        <div class="placeDataInput">
+                            <label for="streetName">Straatnaam</label>
+                            <input type="text" id="streetName" name="streetName" placeholder="Straat" required>
+
+                            <label for="houseNumber">Huisnummer</label>
+                            <input type="text" id="houseNumber" name="houseNumber" placeholder="1" required>
+
+                            <label for="postcode">Postcode</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="1234 AB" required>
+
+                            <label for="place">Woonplaats</label>
+                            <input type="text" id="place" name="place" placeholder="Stad" required>
+
+                            <label for="country">Land</label>
+                            <input type="text" id="country" name="country" placeholder="Land" required>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="step step3">
+                    <section class="bookingConfirmation"></section>
+                </section>
+
+                <button type="button" class="nextBtn">Volgende</button>
+                <button type="submit" class="confirmBtn">Bevestig boeking</button>
+            </form>
+
+            <div class="infoOfCamping">
+                <section class="campingImage">
+                    <img
+                            src="./public/icons/campingMoodImage.jpg"
+                            alt="Camping sfeerafbeelding"
+                            class="campingImage"
+                    >
+                </section>
+                <section class="campingDesc">
+                    <h2>Welkom op onze camping!</h2>
+                    <p>Zoekt u ontspanning? Dan bent u bij onze camping op de goede plek! Geniet van een ruime eigen plek waar u met uw eigen kampeermiddel kan kamperen voor een voordelige prijs!</p>
+                </section>
+            </div>
+        </main>
+    </body>
+    <script type="module" src="./src/layout/layout.js"></script>
+    <script type="module" src="./src/design/themeLoader.js"></script>
+    <script type="module" src="./src/booking/bookingsPage.js"></script>
+</html>

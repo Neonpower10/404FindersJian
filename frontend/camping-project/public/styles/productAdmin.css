@@ -1,0 +1,53 @@
+.productAdmin {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    width: 8%;
+}
+
+.itemsList {
+    width: 40%;
+    background-color: var(--card-bg);
+    border-radius: 50px;
+    max-height: 700px;
+    overflow-y: scroll;
+}
+
+.addProductForm {
+    width: 40%;
+    background-color: var(--card-bg);
+    margin-left: 70px;
+    border-radius: 50px;
+}
+
+.productForm {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.productForm input {
+    width: 50%;
+    margin-left: 40px;
+}
+
+.productForm label {
+    margin-left: 20px;
+}
+
+.formSubmit {
+    width: 30%;
+    margin-left: 40px;
+}
+
+.allItems {
+    margin-left: 40px;
+}
+
+.tabs button {
+    width: 100%;
+}

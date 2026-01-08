@@ -1,0 +1,38 @@
+<html xmlns="">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Product beheer</title>
+    <link rel="stylesheet" href="/styles/productAdmin.css"/>
+</head>
+<body>
+<main class="content">
+    <div class="productAdmin">
+        <div class="tabs">
+            <button class="myProducts">Jouw producten</button>
+            <button class="allReservations">Reservaties</button>
+        </div>
+        <div class="itemsList"></div>
+        <div class="addProductForm">
+            <form class="productForm">
+                <h1>Product toevoegen</h1>
+                <label for="productName">Vul de product naam in:</label>
+                <input type="text" name="productName" id="productName">
+                <label for="productImage">Voeg een afbeelding toe:</label>
+                <input type="file" name="productImage" id="productImage">
+                <label for="productDescription">Geef je product een beschrijving:</label>
+                <input type="text" name="productDescription" id="productDescription">
+                <label for="pricePerDay">Prijs per dag:</label>
+                <input type="text" name="pricePerDay" id="pricePerDay">
+                <label for="productStock">Vul de totale voorraad van het product in:</label>
+                <input type="text" name="productStock" id="productStock">
+                <button class="formSubmit">Voeg product toe</button>
+            </form>
+        </div>
+    </div>
+</main>
+</body>
+<script type="module" src="./src/renting/productAdmin.js"></script>
+<script type="module" src="./src/design/themeLoader.js"></script>
+<script type="module" src="./src/layout/layout.js"></script>
+</html>

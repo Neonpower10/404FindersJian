@@ -1,0 +1,46 @@
+.productCard {
+    background: var(--card-bg);
+    min-width: 40vh;
+    max-width: 40vh;
+    min-height: 35vh;
+    max-height: 35vh;
+    scroll-snap-align: start;
+    border-radius: 25px;
+}
+
+.productList {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 100%;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+
+}
+
+.content {
+    margin: 0 10px;
+    padding: 20px 0;
+    width: 100vh;
+    align-self: center;
+}
+
+.productCard h3 {
+    margin-top: 0;
+}
+
+.productCard h1 {
+    margin-bottom: 3px;
+}
+
+.productList::-webkit-scrollbar {
+    display: none;
+}
+
+.readMore {
+    width: 70%;
+    height: 10%;
+    border-radius: 20px;
+    align-self: center;
+}
