@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg"/>
+    <title>Home</title>
+    <link rel="stylesheet" href="./public/styles/home.css"/>
+</head>
+<body>
+<header id="site-header" class="site-header-pad"></header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-left">
+                <p id="heroEyebrow" class="hero-eyebrow"></p>
+
+                <h1 id="heroTitle" class="hero-title"></h1>
+
+                <p id="heroText" class="hero-text"></p>
+
+                <div class="hero-actions">
+                    <a class="btn-primary" href="bookingsPage.html">Boek nu</a>
+                    <a class="btn-ghost" href="facilitiesPage.html">Bekijk faciliteiten</a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <figure class="hero-photo" aria-label="Sfeerbeeld camping">
+                    <img id="heroImage" src="public/icons/campingMoodImage.jpg" alt="Camping sfeerbeeld" />
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK LINKS SECTION -->
+    <section class="quick-links">
+        <div class="section-head">
+            <h2 id="discoverTitle"></h2>
+            <p id="discoverText"></p>
+        </div>
+
+        <div class="cards">
+            <a class="card" id="bookingCard" href="bookingsPage.html">
+                <img id="cardBookingImage" src="public/icons/campingMoodImage.jpg" alt="Boekingen-impressie" class="card-icon" />
+                <h3>Boekingen</h3>
+                <p id="cardBookingText"></p>
+            </a>
+
+            <a class="card" id="facilitiesCard" href="facilitiesAdmin.html">
+                <img id="cardFacilitiesImage" src="public/icons/campingMoodImage.jpg" alt="Faciliteiten-impressie" class="card-icon" />
+                <h3>Faciliteiten</h3>
+                <p id="cardFacilitiesText"></p>
+            </a>
+
+            <a class="card" id="contactPageCard" href="contactPage.html">
+                <img id="cardContactImage" src="public/icons/campingMoodImage.jpg" alt="Contact-impressie" class="card-icon" />
+                <h3>Contact</h3>
+                <p id="cardContactText"></p>
+            </a>
+
+            <a class="card" id="aboutCard" href="about.html">
+                <img id="cardAboutImage" src="public/icons/campingMoodImage.jpg" alt="Over ons-impressie" class="card-icon" />
+                <h3>Over ons</h3>
+                <p id="cardAboutText"></p>
+            </a>
+        </div>
+    </section>
+
+
+
+    <!-- USP SECTION -->
+    <section class="usps">
+        <div class="section-head">
+            <h2 id="uspSectionTitle">Onze USP’s</h2>
+        </div>
+
+        <div class="usp-grid">
+            <div class="usp">
+                <img src="/icons/notifications.svg" alt="" class="usp-icon" />
+                <h4 id="usp1Title"></h4>
+                <p id="usp1Text"></p>
+            </div>
+
+            <div class="usp">
+                <img src="/icons/notifications.svg" alt="" class="usp-icon" />
+                <h4 id="usp2Title"></h4>
+                <p id="usp2Text"></p>
+            </div>
+
+            <div class="usp">
+                <img src="/icons/notifications.svg" alt="" class="usp-icon" />
+                <h4 id="usp3Title"></h4>
+                <p id="usp3Text"></p>
+            </div>
+
+            <div class="usp">
+                <img src="/icons/notifications.svg" alt="" class="usp-icon" />
+                <h4 id="usp4Title"></h4>
+                <p id="usp4Text"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+        <div class="cta-inner">
+            <h3 id="ctaTitle"></h3>
+            <p id="ctaText"></p>
+            <a class="cta-btn" href="bookingsPage.html">Boek je verblijf</a>
+        </div>
+    </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script type="module" src="./src/layout/layout.js"></script>
+<script type="module" src="./src/design/themeLoader.js"></script>
+<script type="module" src="./src/homePage/homePage.js"></script>
+</body>
+</html>

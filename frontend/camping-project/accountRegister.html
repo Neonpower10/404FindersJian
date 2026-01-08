@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg"/>
+    <title>Registreren</title>
+    <link rel="stylesheet" href="/public/styles/accountRegister.css">
+</head>
+<body class="auth-body">
+
+<!-- NAVBAR -->
+<header id="site-header"></header>
+
+<!-- Hoofdinhoud -->
+<main class="auth-main">
+    <section class="login-container">
+        <div class="login-box">
+            <h2>Account aanmaken</h2>
+
+            <form id="registerForm" novalidate>
+                <input type="text" id="name" placeholder="Voornaam" required>
+                <input type="text" id="surname" placeholder="Achternaam" required>
+                <input type="email" id="email" placeholder="E-mailadres" required>
+                <input type="password" id="password" placeholder="Wachtwoord (min. 6 tekens)" required>
+                <input type="password" id="confirmPassword" placeholder="Herhaal wachtwoord" required>
+
+                <label class="showpass">
+                    <input type="checkbox" id="showPass"> Wachtwoord tonen
+                </label>
+
+                <label class="terms">
+                    <input type="checkbox" id="acceptTerms"> Ik ga akkoord met de voorwaarden
+                </label>
+
+                <button type="submit">Account aanmaken</button>
+
+                <p id="errorMsg" aria-live="polite"></p>
+                <a class="back-link" href="/accountLogin.html">Heb je al een account? Log in</a>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer id="site-footer"></footer>
+
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script type="module" src="src/loginAndRegistration/register.js"></script>
+</body>
+</html>
