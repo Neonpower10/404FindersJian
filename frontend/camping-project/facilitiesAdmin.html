@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Faciliteiten beheren</title>
+    <link rel="stylesheet" href="./public/styles/facilitiesAdmin.css"/>
+</head>
+<body>
+
+<!--
+Main container for the facilities admin interface.
+This interface allows users to add, edit, and preview facilities.
+-->
+<div class="container">
+
+    <!--
+    Card section for adding or editing a facility.
+    Contains a form with input fields and action buttons.
+    -->
+    <div class="card">
+        <h2>Faciliteit toevoegen/bewerken</h2>
+
+        <!--
+        Facility form:
+        - Allows adding a new facility or editing an existing one.
+        - Fields include name, description, image URL, and availability.
+        -->
+        <form id="facilityForm">
+            <!--
+            Text input for facility name (required).
+            -->
+            <div class="field">
+                <label for="name">Naam</label>
+                <input type="text" id="name" required/>
+            </div>
+
+            <!--
+            Textarea for facility description (optional).
+            -->
+            <div class="field">
+                <label for="description">Beschrijving</label>
+                <textarea id="description" required></textarea>
+            </div>
+
+            <!--
+            Text input for the image URL representing the facility.
+            -->
+
+            <div class="field">
+                <label for="image">Afbeelding Bestand</label>
+                <input id="image" type="file" accept="image/*">
+            </div>
+
+
+            <!--
+            Checkbox to indicate whether the facility is available.
+            -->
+            <div class="field">
+                <label><input type="checkbox" id="available"/> Beschikbaar</label>
+            </div>
+
+            <!--
+            Form action buttons:
+            - 'Opslaan' submits the form data.
+            - 'Reset' clears all fields.
+            -->
+            <div class="actions">
+                <button type="submit" class="btn-primary">Opslaan</button>
+                <button type="reset" id="resetBtn" class="btn-reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <!--
+    Card section displaying the list of current facilities.
+    The list is dynamically populated via JavaScript.
+    -->
+    <div class="card">
+        <h2>Huidige faciliteiten</h2>
+
+        <!--
+        Unordered list where facilities will be rendered.
+        Each list item includes facility details and edit/delete options.
+        -->
+        <ul id="facilitiesList"></ul>
+    </div>
+
+    <!--
+    Card section for public preview.
+    Shows how facilities will appear to end-users.
+    -->
+    <div class="card">
+        <h2>Publieke weergave (voorbeeld)</h2>
+
+        <!--
+        Container for rendering a live preview of facilities.
+        Preview is updated dynamically via JavaScript.
+        -->
+        <div id="publicFacilities" class="public-preview"></div>
+    </div>
+
+</div>
+
+<!--
+Toast notification container.
+Used for displaying temporary status messages (e.g., "Saved successfully").
+-->
+<div id="toast" class="toast"></div>
+
+<!--
+JavaScript file for handling facility logic:
+- Adding/editing/removing facilities
+- Form submission
+- Updating list and preview
+- Showing toast messages
+-->
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script src="src/facilities/facilitiesAdmin.js"></script>
+
+</body>
+</html>
