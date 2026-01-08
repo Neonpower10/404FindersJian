@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Productverhuur</title>
+    <link rel="stylesheet" href="public/styles/productRentalList.css">
+</head>
+<body>
+<header id="site-header"></header>
+
+<main class="main-content">
+    <div class="header-section">
+        <h1>Productverhuur</h1>
+        <p>Deze producten bieden wij aan die u kunt huren.</p>
+    </div>
+
+    <div class="products-container">
+        <button class="scroll-btn scroll-left" id="scrollLeft"><</button>
+        <div class="products-scroll" id="productsScroll">
+            <div id="productsList" class="products-list">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+        <button class="scroll-btn scroll-right" id="scrollRight">></button>
+    </div>
+
+    <p id="loadingText" class="loading-text">Producten worden geladen...</p>
+    <p id="errorText" class="error-text" style="display: none;">Er ging iets mis bij het laden van de producten.</p>
+</main>
+
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script type="module" src="src/producten/productRentalList.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg"/>
+  <title>camping-project</title>
+  <link rel="stylesheet" href="public/styles/campingDataAdmin.css"/>
+
+</head>
+<body>
+<a href="dashboardAdmin.html" class="back-btn">← Terug naar dashboard</a>
+<div id="app"></div>
+<script type="module" src="src/contactPage.js"></script>
+
+<header id="site-header"></header>
+
+<div class="container">
+  <!-- ===========================
+       Left column: Admin form
+       Used by staff to manage camping data
+       =========================== -->
+  <div class="card" aria-labelledby="admin-title">
+    <h2 id="admin-title">Manage Camping Data</h2>
+
+    <!-- Camping name input -->
+    <div class="field">
+      <label for="campingName">Camping name</label>
+      <input id="campingName" type="text" placeholder="e.g. Rust & Natuur Camping"/>
+    </div>
+
+    <!-- Address section (street + city) -->
+    <div class="row">
+      <div class="field">
+        <label for="street">Street & number</label>
+        <input id="street" type="text" placeholder="Street 12"/>
+      </div>
+      <div class="field">
+        <label for="city">Postal code & city</label>
+        <input id="city" type="text" placeholder="1234 AB, Village"/>
+      </div>
+    </div>
+
+    <!-- Contact section (phone + email) -->
+    <div class="row">
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" placeholder="+31 6 1234 5678"/>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="info@camping.nl"/>
+      </div>
+    </div>
+
+    <!-- Opening hours -->
+    <div class="field">
+      <label for="openingHours">Opening hours</label>
+      <textarea id="openingHours" type="text" placeholder="e.g. Daily 09:00 - 21:00"></textarea>
+    </div>
+
+    <!-- Price per night -->
+    <div class="field">
+      <label for="price">Base price per night (EUR)</label>
+      <input id="price" type="number" min="0" step="0.01" placeholder="20.00"/>
+    </div>
+
+    <!-- Form actions -->
+    <div class="actions">
+      <button id="saveBtn" class="btn-primary">Save</button>
+      <button id="resetBtn" class="btn-ghost">Reset fields</button>
+      <button id="restoreLatestBtn" class="btn-ghost">Restore latest version</button>
+      <div class="muted" id="saveStatus" aria-live="polite"></div>
+    </div>
+
+    <hr/>
+
+    <!-- Version history -->
+    <h3>Version history</h3>
+    <p class="note">Each time you save, a new version is created.</p>
+    <div class="history-list card" id="historyList"></div>
+  </div>
+
+  <!-- ===========================
+       Right column: Public preview
+       Shows how the camping data will appear publicly
+       =========================== -->
+  <div class="card" aria-labelledby="preview-title">
+    <h2 id="preview-title">Public preview</h2>
+
+    <!-- Preview panel -->
+    <div id="publicPreview" class="public-preview">
+      <div class="preview-title" id="pv-name">Camping name</div>
+      <div class="preview-sub" id="pv-address">Street, City</div>
+      <div class="small" id="pv-contact">Phone · Email</div>
+      <hr/>
+      <div><strong>Opening hours:</strong> <span id="pv-hours">—</span></div>
+      <div><strong>Base price:</strong> € <span id="pv-price">0.00</span> / night</div>
+    </div>
+
+    <!-- Quick actions -->
+    <div>
+      <h3>Quick actions</h3>
+      <button id="openSiteBtn" class="btn-primary">View site (simulation)</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast notifications (temporary messages) -->
+<div id="toast" class="toast"></div>
+
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script src="src/contactDataAdmin.js"></script>
+</body>
+</html>
