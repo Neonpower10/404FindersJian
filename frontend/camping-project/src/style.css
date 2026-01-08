@@ -1,0 +1,61 @@
+.navbar {
+    background: #c9f24f;   /* limegroen */
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+}
+.nav-inner {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.hamburger {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+.logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.icon {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.profile-wrap { position: relative; }
+.menu {
+    position: absolute; right: 0; top: calc(100% + 8px);
+    background: #fff; color: #111;
+    border: 1px solid #e5e7eb; border-radius: 8px; min-width: 200px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12); padding: .5rem;
+    display: none;
+}
+.profile-wrap.open .menu { display: block; }
+.menu a {
+    display: block; padding: .5rem .75rem; border-radius: 6px; text-decoration: none; color: inherit;
+}
+.menu a:hover, .menu a:focus { background: #f2f4f7; outline: none; }
+.menu hr { border: 0; border-top: 1px solid #eef0f2; margin: .4rem 0; }
