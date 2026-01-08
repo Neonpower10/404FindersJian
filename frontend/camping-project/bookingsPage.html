@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Boekingspagina</title>
+    <link rel="stylesheet" href="./public/styles/bookingsPage.css"/>
+</head>
+<body>
+<main class="content">
+    <div class="topSection">
+        <section class="progressAndData">
+
+            <ul class="progressSteps">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+
+            <form class="personDataForm">
+                <h2>Persoonlijke gegevens</h2>
+
+                <fieldset class="askGender">
+                    <legend>Geslacht</legend>
+                    <label>
+                        <input type="radio" name="geslacht" value="Meneer" required/>Meneer
+                    </label>
+                    <label>
+                        <input type="radio" name="geslacht" value="Mevrouw" required/>Mevrouw
+                    </label>
+                    <label>
+                        <input type="radio" name="geslacht" value="Anders" required/>Anders
+                    </label>
+                </fieldset>
+
+                <div class="personDataInput">
+                    <label for="firstName">Voornaam</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="John" required/>
+
+                    <label for="lastName">Achternaam</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Doe" required/>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required/>
+
+                    <label for="phoneNumber">Telefoonnummer</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="0612345678" required/>
+                </div>
+
+                <div class="placeDataInput">
+                    <label for="streetName">Straatnaam</label>
+                    <input type="text" id="streetName" name="streetName" placeholder="Voorbeeldstraat" required/>
+
+                    <label for="houseNumber">Huisnummer</label>
+                    <input type="text" id="houseNumber" name="houseNumber" placeholder="1" required/>
+
+                    <label for="postcode">Postcode</label>
+                    <input type="text" id="postcode" name="postcode" placeholder="1234 AB" required/>
+
+                    <label for="place">Woonplaats</label>
+                    <input type="text" id="place" name="place" placeholder="Stad" required/>
+
+                    <label for="land">Land</label>
+                    <input type="text" id="land" name="land" placeholder="Land" required/>
+                </div>
+            </form>
+        </section>
+        <section class="bookingOverview">
+            <img
+                    src="./public/icons/campingMoodImage.jpg"
+                    alt="Camping sfeerafbeelding"
+                    class="campingImage"
+            >
+
+            <div class="campingInfo">
+                <h2>Camping De Natuur</h2>
+                <p>Limburg</p>
+            </div>
+
+            <div class="bookingDetails">
+                <h3>Boeking details</h3>
+
+                <div class="dateOfStay">
+                    <label for="dateFrom">Aankomstdatum:</label>
+                    <input type="date" id="dateFrom" name="dateFrom">
+                </div>
+
+                <div class="dateOfStay">
+                    <label for="dateTo">Vertrekdatum:</label>
+                    <input type="date" id="dateTo" name="dateTo">
+                </div>
+
+                <p>Type plaats: Standaard plek</p>
+
+                <div class="amountPeople">
+                    <label for="amountInput">Aantal personen:</label>
+                    <button type="button" id="minBtn" aria-label="Verminder aantal personen">-</button>
+                    <span id="amountInput">1</span>
+                    <button type="button" id="plusBtn" aria-label="Verhoog aantal personen">+</button>
+                </div>
+            </div>
+
+            <div class="costOverview">
+                <h3>Kostenoverzicht</h3>
+
+                <ul class="costList">
+                    <li>Prijs per nacht: € <span id="pricePerNight">0</span></li>
+                    <li>Aantal nachten: <span id="amountNights">0</span></li>
+                    <li>Aantal personen: <span id="amountPeople">1</span></li>
+                    <li>Prijs per persoon: € <span id="pricePerPerson">0</span></li>
+                </ul>
+                <h2>Totaal: € <span id="totalPrice">0</span></h2>
+            </div>
+        </section>
+    </div>
+
+    <section class="bookingConfirmation"></section>
+    <button class="confirmBtn">Bevestig boeking</button>
+
+    <button class="nextBtn">Volgende</button>
+
+</main>
+
+<script src="src/bookingsPage.js"></script>
+</body>
+</html>
