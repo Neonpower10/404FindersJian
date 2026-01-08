@@ -1,0 +1,44 @@
+package nl.hu.sd.s2.sds2project2025404finders.verhuur;
+
+import java.math.BigDecimal;
+
+public class Product {
+
+    private int id;
+    private String productName;
+    private String productImageUrl;
+    private String productDescription;
+    private BigDecimal pricePerDay;
+    private int productStock;
+
+    public Product() {}
+
+    public Product(int id, String productName, String productImageUrl,
+                   String productDescription, BigDecimal pricePerDay,
+                   int productStock) {
+        this.id = id;
+        this.productName = productName;
+        this.productImageUrl = productImageUrl;
+        this.productDescription = productDescription;
+        this.pricePerDay = pricePerDay;
+        this.productStock = productStock;
+    }
+
+    public int getId() { return id; }
+    public String getProductName() { return productName; }
+    public String getProductImageUrl() { return productImageUrl; }
+    public String getProductDescription() { return productDescription; }
+    public BigDecimal getPricePerDay() { return pricePerDay; }
+    public int getProductStock() { return productStock; }
+
+    public void setId(int id) { this.id = id; }
+    public void setProductName(String productName) { this.productName = productName; }
+    public void setProductImageUrl(String productImageUrl) { this.productImageUrl = productImageUrl; }
+    public void setProductDescription(String productDescription) { this.productDescription = productDescription; }
+    public void setPricePerDay(BigDecimal pricePerDay) { this.pricePerDay = pricePerDay; }
+    public void setProductStock(int productStock) { this.productStock = productStock; }
+
+    public boolean isInStock() {
+        return productStock > 0;
+    }
+}

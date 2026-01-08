@@ -1,0 +1,14 @@
+{
+  "name": "camping-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --root camping-project --base ./ --outDir ../dist",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7"
+  }
+}
