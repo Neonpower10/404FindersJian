@@ -1,0 +1,379 @@
+/* Font */
+@font-face {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    src: url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.eot");
+    src: url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.svg#SeoulHangang B") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-sans: "SeoulHangang B", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+html, body, button, input, select, textarea {
+    font-family: var(--font-sans);
+}
+
+/* Navbar */
+.navbar {
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 250ms, background-color 250ms;
+}
+
+.nav-inner {
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.desktop-nav {
+    display: none;
+    align-items: center;
+    gap: 8px;
+}
+
+.desktop-nav-item {
+    color: var(--navbar-text);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 150ms;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.desktop-nav-item .material-symbols-outlined {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    font-variation-settings: 'FILL' 0;
+    transition: transform 300ms ease-out;
+    display: inline-block;
+}
+
+.desktop-nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.desktop-nav-item:hover .material-symbols-outlined {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Buttons */
+.m3-icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--navbar-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 150ms;
+}
+
+.m3-icon-button:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Hamburger */
+.hamburger {
+    font-size: 0;
+    background: none;
+}
+
+.hamburger-icon {
+    width: 24px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    border-radius: 9999px;
+    transition: transform 250ms, opacity 250ms;
+}
+
+.hamburger.open .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Profile */
+.profile-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 9999px;
+    transition: transform 150ms;
+}
+
+.btn-profile:hover .profile-icon {
+    transform: scale(1.1);
+}
+
+.profile-wrap {
+    position: relative;
+}
+
+.m3-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    border-radius: 12px;
+    min-width: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
+    padding: 4px 0;
+    /* Use visibility and pointer-events instead of display for smooth animation */
+    visibility: hidden;
+    pointer-events: none;
+    /* Closed state: menu has no height and is slightly above its position */
+    /* This creates a true dropdown roll-out effect */
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-8px);
+    /* Smooth transition for max-height (rolls out), transform (slides), and visibility */
+    transition: max-height 300ms ease-out, transform 300ms ease-out, visibility 300ms;
+    z-index: 1001;
+}
+
+.profile-wrap.open .m3-menu {
+    /* When menu is open: make it visible and interactive */
+    visibility: visible;
+    pointer-events: auto;
+    /* Open state: menu expands to full height and slides to normal position */
+    /* max-height: 500px is large enough to fit all menu items (adjust if needed) */
+    max-height: 500px;
+    transform: translateY(0);
+}
+
+.m3-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: var(--navbar-text);
+    transition: background-color 150ms;
+}
+
+.m3-menu-item .material-symbols-outlined {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    font-variation-settings: 'FILL' 0;
+    transition: transform 300ms ease-out;
+    display: inline-block;
+}
+
+.m3-menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.m3-menu-item:hover .material-symbols-outlined {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.m3-divider {
+    height: 1px;
+    background: var(--navbar-text);
+    opacity: 0.12;
+    margin: 4px 0;
+}
+
+/* Add space at top for fixed navbar */
+body {
+    margin-top: 64px !important;
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    .hamburger {
+        display: none;
+    }
+    .desktop-nav {
+        display: flex;
+    }
+}
+
+/* Mobile */
+@media (max-width: 899px) {
+    .desktop-nav {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 4px 8px;
+    }
+    body {
+        margin-top: 56px !important;
+    }
+    .m3-icon-button {
+        width: 36px;
+        height: 36px;
+    }
+    .profile-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Sidebar */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.32);
+    z-index: 1998;
+    display: none;
+    opacity: 0;
+    transition: opacity 250ms;
+}
+
+.sidebar-overlay.open {
+    display: block;
+    opacity: 1;
+}
+
+.m3-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    max-width: 85vw;
+    height: 100%;
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    z-index: 1999;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
+    transform: translateX(-100%);
+    transition: transform 250ms;
+    overflow-y: auto;
+}
+
+.m3-sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid;
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+    min-height: 64px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--navbar-text);
+}
+
+.sidebar-close {
+    font-size: 24px;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0;
+}
+
+.m3-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    color: var(--navbar-text);
+    text-decoration: none;
+    transition: background-color 150ms;
+}
+
+.m3-sidebar-item .material-symbols-outlined {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    font-variation-settings: 'FILL' 0;
+    transition: transform 300ms ease-out;
+    display: inline-block;
+}
+
+.m3-sidebar-item:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.m3-sidebar-item:hover .material-symbols-outlined {
+    transform: scale(1.2) rotate(10deg);
+}
+
+@media (min-width: 900px) {
+    .m3-sidebar {
+        width: 320px;
+    }
+}

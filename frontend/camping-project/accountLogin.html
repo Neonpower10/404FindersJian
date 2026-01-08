@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg"/>
+    <title>Inloggen</title>
+    <link rel="stylesheet" href="/public/styles/style.css">
+    <link rel="stylesheet" href="/public/styles/nav.css">
+    <link rel="stylesheet" href="/public/styles/footer.css">
+    <link rel="stylesheet" href="/public/styles/login.css">
+</head>
+<body class="auth-body">
+
+<!-- NAVBAR -->
+<header id="site-header"></header>
+
+<!-- Hoofdinhoud -->
+<main class="auth-main">
+    <section class="login-container">
+        <div class="login-box">
+            <h2>Inloggen</h2>
+
+            <!-- Login form (validated by JavaScript) -->
+            <form id="loginForm" novalidate>
+                <!-- E-mail -->
+                <input type="email" id="email" placeholder="E-mailadres" required>
+
+                <!-- Password field -->
+                <input type="password" id="password" placeholder="Wachtwoord" required>
+
+                <!-- Checkbox to toggle password visibility -->
+                <label class="showpass">
+                    <input type="checkbox" id="showPass"> Wachtwoord tonen
+                </label>
+
+                <!-- Login button -->
+                <button type="submit">Inloggen</button>
+
+                <!-- Error message area (set by login.js) -->
+                <p id="errorMsg" aria-live="polite"></p>
+
+                <!-- Optional link to password reset page -->
+                <a href="/accountPasswordReset.html" class="forgot-link">Wachtwoord vergeten?</a><br>
+                <a href="/accountRegister.html" class="back-link">Nog geen account? Registreren</a>
+            </form>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script type="module" src="src/loginAndRegistration/login.js"></script>
+
+</body>
+</html>

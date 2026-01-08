@@ -1,0 +1,42 @@
+name: frontend-build
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.19.0'
+          cache: 'npm'
+
+      - name: Show Node & npm versions
+        run: |
+          node -v
+          npm -v
+          pwd
+          ls -la
+
+      - name: Show frontend files and package.json
+        run: |
+          ls -la frontend
+          echo "---- frontend/package.json ----"
+          cat frontend/package.json || true
+
+      - name: Install dependencies (CI)
+        working-directory: frontend
+        run: npm ci --loglevel=verbose
+
+      - name: Build with Vite (verbose, capture output)
+        working-directory: frontend
+        run: |
+          npm run build --loglevel=verbose 2>&1 | tee build-output.log
+
+

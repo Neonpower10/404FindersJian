@@ -1,0 +1,81 @@
+name: ci-workflow
+run-name: ${{ github.actor }} triggered CI pipeline
+
+on:
+  pull_request:
+    branches: ["main"]
+  merge_group:
+    types: [checks_requested]
+
+jobs:
+  test-backend:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: 404FindersJian
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U postgres"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Wait for PostgreSQL
+        run: |
+          until pg_isready -h localhost -p 5432 -U postgres; do
+            echo "Waiting for postgres..."
+            sleep 2
+          done
+
+      - name: Run database migrations / schema
+        run: |
+          psql postgresql://postgres:postgres@localhost:5432/404FindersJian <<EOF
+          CREATE TABLE IF NOT EXISTS themes (
+              theme_id SERIAL PRIMARY KEY,
+              name TEXT UNIQUE NOT NULL,
+              is_default BOOLEAN NOT NULL DEFAULT false
+          );
+
+          CREATE TABLE IF NOT EXISTS theme_variables (
+              variable_id SERIAL PRIMARY KEY,
+              theme_id INT REFERENCES themes(theme_id) ON DELETE CASCADE,
+              variable_name TEXT NOT NULL,
+              variable_value TEXT NOT NULL
+          );
+          EOF
+
+      - name: Run tests + JaCoCo
+        run: |
+          mvn --batch-mode clean test jacoco:report
+
+      - name: Report JUnit results
+        uses: dorny/test-reporter@v2
+        if: success() || failure()
+        with:
+          name: JUnit Tests
+          path: target/surefire-reports/*.xml
+          reporter: java-junit
+
+      - name: Upload JaCoCo coverage
+        uses: actions/upload-artifact@v4
+        if: success() || failure()
+        with:
+          name: backend-coverage
+          path: target/site/jacoco/
