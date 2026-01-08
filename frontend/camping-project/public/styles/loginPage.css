@@ -1,0 +1,34 @@
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.login-box {
+    background-color: lightgreen; /* Lichtgroene box */
+    width: 250px;
+    padding: 20px;
+    margin: 100px auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input::placeholder {
+    color: lightgray; /* Placeholder lichtgrijs */
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}

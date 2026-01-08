@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>camping-project</title>
+    <link rel="stylesheet" href="./public/styles/bookingsAdmin.css" />
+  </head>
+  <body>
+    <div class="content">
+        <div class="bookingsContainer">
+            <div class="bookingsListContainer">
+                <div class="bookingsHeader">
+                    <h1 id="bookingsTitle">Boekingen</h1>
+                </div>
+                <table class="bookingList" id="bookingsTable">
+                    <tr>
+                        <th id="bookingHeader">ID</th>
+                        <th id="bookingHeader">Personen</th>
+                        <th id="bookingHeader">Aankomst datum</th>
+                        <th id="bookingHeader">Vetrek datum</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/src/layout.js"></script>
+    <script src="src/themeLoader.js"></script>
+    <script type="module" src="./src/bookingsAdmin.js"></script>
+  </body>
+</html>

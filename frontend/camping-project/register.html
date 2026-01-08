@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Registreren</title>
+
+    <!-- Globale styles -->
+    <link rel="stylesheet" href="/public/styles/style.css">
+    <link rel="stylesheet" href="/public/styles/nav.css">
+    <link rel="stylesheet" href="/public/styles/footer.css">
+
+    <!-- Pagina-specifieke CSS -->
+    <link rel="stylesheet" href="/public/styles/register.css">
+</head>
+<body class="auth-body">
+
+<!-- NAVBAR -->
+<header id="site-header"></header>
+
+<!-- Hoofdinhoud -->
+<main class="auth-main">
+    <section class="login-container">
+        <div class="login-box">
+            <h2>Account aanmaken</h2>
+
+            <form id="registerForm" novalidate>
+                <input type="text" id="name" placeholder="Voornaam" required>
+                <input type="text" id="surname" placeholder="Achternaam" required>
+                <input type="email" id="email" placeholder="E-mailadres" required>
+                <input type="password" id="password" placeholder="Wachtwoord (min. 6 tekens)" required>
+                <input type="password" id="confirmPassword" placeholder="Herhaal wachtwoord" required>
+
+                <label class="showpass">
+                    <input type="checkbox" id="showPass"> Wachtwoord tonen
+                </label>
+
+                <label class="terms">
+                    <input type="checkbox" id="acceptTerms"> Ik ga akkoord met de voorwaarden
+                </label>
+
+                <button type="submit">Account aanmaken</button>
+
+                <p id="errorMsg" aria-live="polite"></p>
+                <a class="back-link" href="/login.html">Heb je al een account? Log in</a>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer id="site-footer"></footer>
+
+<!-- Thema loader -->
+<script src="/src/themeLoader.js"></script>
+
+<!-- Navbar + footer mount -->
+<script type="module">
+    import { mountNavBar } from '/src/nav.js';
+    import { mountFooter } from '/src/footer.js';
+
+    const headerEl = document.getElementById('site-header');
+    const footerEl = document.getElementById('site-footer');
+
+    if (headerEl) mountNavBar(headerEl);
+    if (footerEl) mountFooter(footerEl);
+</script>
+
+<!-- Registratie logic -->
+<script type="module" src="/src/register.js"></script>
+</body>
+</html>
