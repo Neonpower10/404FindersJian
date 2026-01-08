@@ -1,0 +1,108 @@
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.lijst, .details {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--text);
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--text);
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    color: var(--text);
+    display: inline-block;
+}
+
+.tab-button.active {
+    border-bottom-color: var(--accent);
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--text);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.reservation {
+    border: 1px solid var(--text);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.reservation.selected {
+    background: var(--accent);
+}
+
+.reservation-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reservation-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid var(--text);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--accent-text);
+}
+
+.btn-tonal, .btn-danger {
+    background: var(--card-bg);
+    color: var(--text);
+}
+
+.detail-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.detail-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.detail-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.leeg {
+    text-align: center;
+    margin-top: 20px;
+}

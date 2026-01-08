@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Admin</title>
+    <link rel="stylesheet" href="./public/styles/adminHome.css" />
+</head>
+<body>
+<div class="admin-container">
+
+    <!-- ====== INPUTS ====== -->
+    <div class="admin-controls">
+
+        <section>
+            <h2>Hoofdsectie</h2>
+            <h4>De hoofdsectie staat bovenaan de home pagina. Deze bevat een tagline, de naam, de beschrijving, en een sfeerafbeelding van uw camping.</h4>
+            <label>Tagline:</label>
+            <input type="text" id="heroEyebrow" />
+            <label>Titel:</label>
+            <input type="text" id="heroTitle" />
+            <label>Beschrijving:</label>
+            <textarea id="heroText"></textarea>
+            <label>Sfeer afbeelding:</label>
+            <input type="file" id="heroImageInput" accept="image/*" />
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Snelkoppelingen</h2>
+            <label>De 4 snelkoppelingen staan vast, je kunt daarentegen wel uw eigen beschrijving toevoegen!</label>
+            <h3>Boekingen</h3>
+            <label>Beschrijving:</label>
+            <input type="text" id="cardBookingText" />
+            <label>Impressie afbeelding:</label>
+            <input type="file" id="cardBookingImage" accept="image/*" />
+
+            <h3>Faciliteiten</h3>
+            <label>Beschrijving:</label>
+            <input type="text" id="cardFacilitiesText" />
+            <label>Impressie afbeelding:</label>
+            <input type="file" id="cardFacilitiesImage" accept="image/*" />
+
+            <h3>Contact</h3>
+            <label>Beschrijving:</label>
+            <input type="text" id="cardContactText" />
+            <label>Impressie afbeelding:</label>
+            <input type="file" id="cardContactImage" accept="image/*" />
+
+            <h3>Over ons</h3>
+            <label>Beschrijving:</label>
+            <input type="text" id="cardAboutText" />
+            <label>Impressie afbeelding:</label>
+            <input type="file" id="cardAboutImage" accept="image/*" />
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>USP Sectie</h2>
+            <label>Een USP is een Unique Selling Point. Het is een specifiek voordeel of kenmerk dat klanten een reden geeft om voor jou te kiezen in plaats van voor een alternatief. </label>
+            <h3>USP 1</h3>
+            <label>Titel USP 1:</label>
+            <input type="text" id="usp1Title" placeholder="Titel" />
+            <label>Beschrijving USP 1:</label>
+            <textarea id="usp1Text" placeholder="Tekst"></textarea>
+
+            <h3>USP 2</h3>
+            <label>Titel USP 2:</label>
+            <input type="text" id="usp2Title" placeholder="Titel" />
+            <label>Beschrijving USP 2:</label>
+            <textarea id="usp2Text" placeholder="Tekst"></textarea>
+
+            <h3>USP 3</h3>
+            <label>Titel USP 3:</label>
+            <input type="text" id="usp3Title" placeholder="Titel" />
+            <label>Beschrijving USP 3:</label>
+            <textarea id="usp3Text" placeholder="Tekst"></textarea>
+
+            <h3>USP 4</h3>
+            <label>Titel USP 4:</label>
+            <input type="text" id="usp4Title" placeholder="Titel" />
+            <label>Beschrijving USP 4:</label>
+            <textarea id="usp4Text" placeholder="Tekst"></textarea>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Call-to-Action</h2>
+            <h4>De CTA, Call To Action, is een gebied onderaan de pagina, net boven de footer. Deze bevat de laatste overtuiging voor de kampeerders om nu te boeken nadat ze de homepagina hebben bekeken.</h4>
+            <label>Titel:</label>
+            <input type="text" id="ctaTitle" />
+            <label>Beschrijving:</label>
+            <textarea id="ctaText"></textarea>
+        </section>
+
+        <button id="saveBtn">Opslaan</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+
+    <!-- ====== LIVE PREVIEW ====== -->
+    <div class="admin-preview">
+        <h2>Mini Homepagina Preview</h2>
+
+        <!-- HERO -->
+        <section class="preview-hero">
+            <small>Hero Eyebrow</small>
+            <p id="p_heroEyebrow"></p>
+
+            <small>Hero Titel</small>
+            <h1 id="p_heroTitle"></h1>
+
+            <small>Hero Tekst</small>
+            <p id="p_heroText"></p>
+
+            <small>Hero Afbeelding</small>
+            <img id="p_heroImage" src="public/icons/campingMoodImage.jpg" alt="Hero preview" />
+        </section>
+
+        <hr>
+
+        <!-- QUICK LINKS -->
+        <section class="preview-quicklinks">
+            <h3>Quick Links</h3>
+
+            <small>Boekingen Tekst</small>
+            <p id="p_cardBookingText"></p>
+            <img id="p_cardBookingImage" src="public/icons/campingMoodImage.jpg" alt="Booking preview" />
+
+            <small>Faciliteiten Tekst</small>
+            <p id="p_cardFacilitiesText"></p>
+            <img id="p_cardFacilitiesImage" src="public/icons/campingMoodImage.jpg" alt="Facilities preview" />
+
+            <small>Contact Tekst</small>
+            <p id="p_cardContactText"></p>
+            <img id="p_cardContactImage" src="public/icons/campingMoodImage.jpg" alt="Contact preview" />
+
+            <small>Over ons Tekst</small>
+            <p id="p_cardAboutText"></p>
+            <img id="p_cardAboutImage" src="public/icons/campingMoodImage.jpg" alt="About preview" />
+        </section>
+
+        <hr>
+
+        <!-- USPs -->
+        <section class="preview-usps">
+            <h3>USP’s</h3>
+
+            <small>USP 1</small>
+            <h4 id="p_usp1Title"></h4>
+            <p id="p_usp1Text"></p>
+
+            <small>USP 2</small>
+            <h4 id="p_usp2Title"></h4>
+            <p id="p_usp2Text"></p>
+
+            <small>USP 3</small>
+            <h4 id="p_usp3Title"></h4>
+            <p id="p_usp3Text"></p>
+
+            <small>USP 4</small>
+            <h4 id="p_usp4Title"></h4>
+            <p id="p_usp4Text"></p>
+        </section>
+
+        <hr>
+
+        <!-- CTA -->
+        <section class="preview-cta">
+            <h3>Call-to-Action</h3>
+            <small>CTA Titel</small>
+            <p id="p_ctaTitle"></p>
+
+            <small>CTA Tekst</small>
+            <p id="p_ctaText"></p>
+        </section>
+
+    </div>
+
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<script type="module" src="./src/layout/layout.js"></script>
+<script type="module" src="./src/design/themeLoader.js"></script>
+<script type="module" src="./src/adminHome.js"></script>
+</body>
+</html>

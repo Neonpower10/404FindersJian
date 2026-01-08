@@ -1,0 +1,86 @@
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+    background: var(--bg);
+    min-height: 100vh;
+    color: var(--text);
+}
+
+body {
+    margin: 0;
+    background: var(--bg, #f8fafc);
+    color: var(--text, #0f172a);
+}
+
+
+h1 {
+    background: var(--card-bg);
+    color: var(--card-text);
+    text-align: center;
+    margin-inside: 200px;
+    font-size: 3rem;
+}
+
+
+.facilities-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1.5rem;
+}
+
+.facility-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+    border: 1px solid var(--card-text);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.facility-card img {
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid var(--card-text);
+    object-fit: contain;
+}
+
+.facility-card h2 {
+    font-size: 1.4rem;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: var(--card-text);
+}
+
+.facility-card p {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 0.95rem;
+    color: var(--card-text);
+}
+
+.message {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--card-text);
+    margin-top: 2rem;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .facility-card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

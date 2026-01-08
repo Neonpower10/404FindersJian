@@ -1,0 +1,183 @@
+/* --- Algemene instellingen --- */
+:root {
+    --primary-color: #2c3e50; /* Donkerblauw/Grijs */
+    --accent-color: #27ae60;  /* Groen voor acties/knoppen */
+    --bg-color: #f4f7f6;      /* Lichte achtergrond */
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-radius: 8px;
+    --spacing: 20px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);;
+}
+
+/* --- Page Header --- */
+.page-header {
+    background-color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- Layout Container --- */
+.rental-container {
+    display: flex;
+    flex-wrap: wrap; /* For small screen */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    align-items: flex-start; /* for sticky cart */
+}
+
+/* --- Products Section --- */
+.products-section {
+    flex: 2;
+    min-width: 300px;
+}
+
+.products-section h2,
+.cart-section h2 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+/* Grid for products */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* --- Styling voor dynamische Product Cards (die JS gaat laden) --- */
+/* Zorg dat je in je JS de producten de class .product-card geeft */
+.product-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+}
+
+.product-card button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.product-card button:hover {
+    background-color: #34495e;
+}
+
+/* --- Loading & Error text --- */
+.loading-text {
+    font-style: italic;
+    color: #666;
+}
+.error-text {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+/* --- shopping card  --- */
+.cart-section {
+    flex: 1; /* Neemt 1/3e van de ruimte in */
+    min-width: 280px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    /* Sticky effect*/
+    position: sticky;
+    top: 20px;
+}
+
+.cart-items {
+    min-height: 100px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.empty-cart {
+    color: #888;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cart-total {
+    font-size: 1.2rem;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+/* --- Checkout Button --- */
+.btn-checkout {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-checkout:hover:not(:disabled) {
+    background-color: #219150;
+}
+
+.btn-checkout:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* --- Media Queries (Mobiel) --- */
+@media (max-width: 768px) {
+    .rental-container {
+        flex-direction: column;
+    }
+
+    .cart-section {
+        position: static; /* Sticky uitzetten op mobiel */
+        width: 100%;
+        box-sizing: border-box; /* Voorkomt dat padding de breedte breekt */
+    }
+}
