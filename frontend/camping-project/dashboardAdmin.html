@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beheerdersdashboard</title>
+  <link rel="stylesheet" href="public/styles/dashboardAdmin.css" />
+</head>
+<body>
+
+<!--
+  HEADER SECTION
+  Contains the main title of the administrator dashboard.
+  This section stays consistent across all admin dashboard pages.
+-->
+<header>
+  <h1>Beheerdersdashboard</h1>
+</header>
+
+<!--
+  MAIN DASHBOARD LAYOUT
+  Divided into two major parts:
+    1. Navigation area with links to different admin modules.
+    2. Sidebar displaying key statistics.
+-->
+<main class="dashboard-container">
+
+  <!--
+    DASHBOARD NAVIGATION
+    Displays all admin-related pages as clickable cards.
+    Each card links to a separate management page.
+  -->
+  <section class="dashboard-navigation">
+    <h2>Beheerpagina’s</h2>
+
+    <!--
+      NAVIGATION GRID
+      Organizes all navigation cards in a grid layout for easy access.
+    -->
+    <div class="nav-grid">
+      <!-- Styling Management -->
+      <a href="designAdminPage.html" class="nav-card">
+        <h3>Stylingbeheer</h3>
+        <p>Beheer de opmaak en kleuren van de website.</p>
+      </a>
+
+      <!-- Facilities Management -->
+      <a href="facilitiesAdmin.html" class="nav-card">
+        <h3>Faciliteitenbeheer</h3>
+        <p>Pas faciliteiten aan of voeg nieuwe toe.</p>
+      </a>
+
+      <!-- Booking Management -->
+      <a href="adminBookings.html" class="nav-card">
+        <h3>Boekingenbeheer</h3>
+        <p>Bekijk en beheer alle reserveringen.</p>
+      </a>
+
+      <!-- Bread Module Management -->
+      <a href="breadManagement.html" class="nav-card">
+        <h3>Broodjesmodulebeheer</h3>
+        <p>Beheer het assortiment en bestellingen.</p>
+      </a>
+
+      <!-- Additional Modules -->
+      <a href="moduleAdmin.html" class="nav-card">
+        <h3>Modules</h3>
+        <p>Activeer of beheer extra functionaliteiten.</p>
+      </a>
+    </div>
+  </section>
+
+  <!--
+    DASHBOARD STATISTICS SIDEBAR
+    Displays quick statistical data such as messages, bookings,
+    arrivals, and departures. Each stat is updated dynamically via JS.
+  -->
+  <aside class="dashboard-stats">
+    <h2>Statistieken</h2>
+
+    <!--
+      STATS GRID
+      Organizes individual statistic cards for a clean overview.
+    -->
+    <div class="stats-grid">
+      <!-- New messages card -->
+      <div class="stat-card" id="new-messages">
+        <h3>Nieuwe meldingen</h3>
+        <p><span class="stat-number">0</span> meldingen</p>
+      </div>
+
+      <!-- New bookings card -->
+      <div class="stat-card" id="new-bookings">
+        <h3>Nieuwe reserveringen</h3>
+        <p><span class="stat-number">0</span> nieuwe</p>
+      </div>
+
+      <!-- Arrivals today -->
+      <div class="stat-card" id="arrivals">
+        <h3>Aankomsten vandaag</h3>
+        <p><span class="stat-number">0</span> klanten</p>
+      </div>
+
+      <!-- Departures today -->
+      <div class="stat-card" id="departures">
+        <h3>Vertrekken vandaag</h3>
+        <p><span class="stat-number">0</span> klanten</p>
+      </div>
+    </div>
+  </aside>
+</main>
+
+<!--
+  SCRIPT IMPORTS
+  - layout.js handles the global layout and structure
+  - themeLoader.js loads and applies theme variables
+  - dashboardAdmin.js manages dynamic dashboard content
+-->
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script type="module" src="src/dashboard/dashboardAdmin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+.confirmationContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin-bottom: 50px;
+}
+
+.confirmationContent h1 {
+    font-size: 4em;
+}
+
+.confirmationContent p {
+    text-align: center;
+}
