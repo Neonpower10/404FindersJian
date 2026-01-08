@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Facilities</title>
+
+    <!-- Stylesheet for the campers' facilities page -->
+    <link rel="stylesheet" href="./public/styles/facilities.css" />
+</head>
+<body>
+
+<!--
+Header section
+Displays the title of the facilities page.
+-->
+<header>
+    <h1>Our Facilities</h1>
+</header>
+
+<!--
+Main content container
+Contains the grid of available facilities and a message area for status or errors.
+-->
+<main class="container">
+    <!-- Facilities will be dynamically rendered here via JavaScript -->
+    <section id="facilitiesGrid" class="facilities-grid"></section>
+
+    <!-- Message area for displaying loading, error, or empty state messages -->
+    <p id="message" class="message"></p>
+</main>
+
+<!--
+Global scripts
+These are used across the website for layout and theming.
+-->
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+
+<!--
+Page-specific script
+Handles loading and displaying facilities for campers.
+-->
+<script src="src/facilities/facilities.js"></script>
+</body>
+</html>

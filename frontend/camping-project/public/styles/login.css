@@ -1,0 +1,92 @@
+/* Layout for auth pages */
+.auth-main {
+    min-height: calc(100vh - 80px); /* ruimte voor navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 16px 40px;
+}
+
+/* Wrapper for the card */
+.login-container {
+    width: 100%;
+    max-width: 380px;
+}
+
+/* Card styling */
+.login-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin: 0 0 12px;
+}
+
+/* Inputs */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+/* Checkbox label */
+.showpass {
+    display: block;
+    text-align: left;
+    margin: 6px 0 10px;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+/* Button */
+.login-box button[type="submit"] {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 4px;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-box button[type="submit"]:hover {
+    filter: brightness(0.95);
+}
+
+/* Error text */
+#errorMsg {
+    min-height: 1.2em;
+    color: var(--danger);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+/* Links */
+.forgot-link,
+.back-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #0b5ed7;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-link:hover,
+.back-link:hover {
+    text-decoration: underline;
+}

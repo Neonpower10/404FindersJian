@@ -1,0 +1,141 @@
+/* 1) Font-faces */
+@font-face {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    src: url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.eot");
+    src: url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/12cd8044daeac748895f04054a3bb4b0.svg#SeoulHangang B") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Global font */
+:root {
+    --font-sans: "SeoulHangang B", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+html, body, button, input, select, textarea {
+    font-family: var(--font-sans);
+}
+
+/* 2) Nav-bar */
+.navbar {
+    background: var(--navbar-bg);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-inner {
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hamburger {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* Profile menu */
+.profile-wrap { position: relative; }
+.menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    background: var(--navbar-bg);
+    color: var(--text);
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    padding: .5rem;
+    display: none;
+}
+
+.profile-wrap.open .menu { display: block; }
+
+.menu a {
+    display: block;
+    padding: .5rem .75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu a:hover, .menu a:focus {
+    background: rgba(0,0,0,0.05);
+    outline: none;
+}
+
+.menu hr {
+    border: 0;
+    border-top: 1px solid #eef0f2;
+    margin: .4rem 0;
+}
+
+/* button icons in the navbar */
+.icon-btn img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* adjust to navbar height so content isn’t hidden */
+body {
+    margin-top: 60px;
+}

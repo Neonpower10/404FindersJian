@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Home</title>
+    <link rel="stylesheet" href="./public/styles/home.css"/>
+</head>
+<body>
+<!-- NAVBAR (unchanged) -->
+<header id="site-header" class="site-header-pad"></header>
+
+<main>
+    <!-- HERO: -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-left">
+                <!-- Eyebrow/kicker -->
+                <p class="hero-eyebrow">Welkom bij Camping De Natuur</p>
+
+                <!-- Main headline -->
+                <h1 class="hero-title">
+                    Ontsnap naar rust en ruimte
+                    <span class="accent">midden in de natuur</span>
+                </h1>
+
+                <!-- Supporting text -->
+                <p class="hero-text">
+                    Geniet van ruime staanplaatsen, moderne faciliteiten en
+                    een gastvrije sfeer. Boek eenvoudig je verblijf.
+                </p>
+
+                <!-- Primary actions for campers -->
+                <div class="hero-actions">
+                    <a class="btn-primary" href="bookingsPage.html">Boek nu</a>
+                    <a class="btn-ghost" href="facilitiesAdmin.html">Bekijk faciliteiten</a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <!-- Simple image placeholder; replace src later via content -->
+                <!-- English doc: fixed image (no upload UI); contained by CSS -->
+                <figure class="hero-photo" aria-label="Sfeerbeeld camping">
+                    <img src="/public/images/hero-placeholder.jpg" alt="Camping sfeerbeeld" />
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK NAV FOR VISITORS -->
+    <section class="quick-links">
+        <div class="section-head">
+            <h2>Ontdek onze camping</h2>
+            <p>Alles wat je nodig hebt voor een ontspannen verblijf.</p>
+        </div>
+
+        <div class="cards">
+            <a class="card" href="bookingsPage.html">
+                <img src="/icons/calendar.svg" alt="" class="card-icon" />
+                <h3>Boekingen</h3>
+                <p>Reserveer snel en eenvoudig.</p>
+            </a>
+
+            <a class="card" href="facilitiesAdmin.html">
+                <img src="/icons/tent.svg" alt="" class="card-icon" />
+                <h3>Faciliteiten</h3>
+                <p>Sanitair, speelmogelijkheden en meer.</p>
+            </a>
+
+            <a class="card" href="contactPage.html">
+                <img src="/icons/mail.svg" alt="" class="card-icon" />
+                <h3>Contact</h3>
+                <p>Vragen? We helpen je graag.</p>
+            </a>
+
+            <a class="card" href="about.html">
+                <img src="/icons/info.svg" alt="" class="card-icon" />
+                <h3>Over ons</h3>
+                <p>Lees meer over onze camping.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- USP's: short selling points -->
+    <section class="usps">
+        <div class="section-head">
+            <h2>Waarom bij ons?</h2>
+        </div>
+
+        <div class="usp-grid">
+            <div class="usp">
+                <img src="/icons/leaf.svg" alt="" class="usp-icon" />
+                <h4>Natuurrijk</h4>
+                <p>Rust, ruimte en groen.</p>
+            </div>
+
+            <div class="usp">
+                <img src="/icons/shower.svg" alt="" class="usp-icon" />
+                <h4>Comfort</h4>
+                <p>Modern sanitair en goede voorzieningen.</p>
+            </div>
+
+            <div class="usp">
+                <img src="/icons/family.svg" alt="" class="usp-icon" />
+                <h4>Gezinsvriendelijk</h4>
+                <p>Activiteiten voor jong en oud.</p>
+            </div>
+
+            <div class="usp">
+                <img src="/icons/map-pin.svg" alt="" class="usp-icon" />
+                <h4>Goede locatie</h4>
+                <p>Dichtbij wandel- en fietsroutes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band">
+        <div class="cta-inner">
+            <h3>Klaar om te verblijven?</h3>
+            <p>Bekijk beschikbaarheid en reserveer je plek.</p>
+            <a class="cta-btn" href="bookingsPage.html">Boek je verblijf</a>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER (existing) -->
+<footer id="site-footer"></footer>
+
+</div>
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+</body>
+</html>

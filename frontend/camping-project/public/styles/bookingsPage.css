@@ -1,0 +1,196 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.progressSteps {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.progressSteps li {
+    background-color: rgb(240, 240, 240);
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-size: larger;
+}
+
+.progressSteps li.active {
+    background-color: rgb(131, 167, 126);
+    color: white;
+    border-color: rgb(0, 0, 0);
+}
+
+.progressSteps::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #000000;
+    z-index: 0;
+}
+
+.step {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    max-width: 600px;
+}
+
+.step.show {
+    display: block;
+    opacity: 1;
+}
+
+.bookingOverview {
+    background-color: rgb(203, 210, 159);
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookingOverview img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.campingInfo {
+    border: 2px solid rgb(154, 159, 122);
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.campingInfo p,
+.campingInfo h2,
+.bookingInfo p,
+.dateOfStay,
+.amountPeople,
+.bookingDetails h3,
+.costOverview h3,
+.costOverview h2,
+.typePlace {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bookingDetails,
+.costOverview {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.step.show .bookingDetails,
+.step.show .costOverview {
+    max-height: 500px;
+}
+
+.personDataForm {
+    display: grid;
+    width: 90%;
+    background-color: rgb(152, 191, 143);
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px auto;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 10px 10px;
+}
+
+.personDataForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: rgb(242, 255, 215);
+    font-size: 2em;
+}
+
+.personDataInput {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.placeDataInput {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.personDataInput label,
+.placeDataInput label,
+.personDataInput input,
+.placeDataInput input {
+    font-size: 1.5em;
+    margin: 5px;
+}
+
+.askGender {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: row;
+    font-size: 1.4em;
+}
+
+.bookingConfirmation {
+    border: 2px solid rgb(154, 159, 122);
+    border-radius: 30px;
+    width: 92%;
+    box-shadow: 10px 10px;
+    background-color: rgb(204, 214, 140);
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.bookingConfirmation.show {
+    display: flex;
+}
+
+.nextBtn,
+.confirmBtn {
+    font-size: large;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 1px solid rgb(0, 0, 0);
+    transition: font-size 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+    display: block;
+    width: 100%;
+    max-width: 600px;
+}
+
+.nextBtn:hover,
+.confirmBtn:hover {
+    background-color: rgb(131, 167, 126);
+    color: white;
+    border-color: rgb(131, 167, 126);
+    cursor: pointer;
+    font-size: x-large;
+}
+
+.amountPeople p {
+    margin-left: 0;
+}

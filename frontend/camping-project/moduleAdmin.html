@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules</title>
+    <link rel="stylesheet" href="./public/styles/moduleAdmin.css">
+</head>
+<body>
+<h1>Modules</h1>
+<!--Left box has the modules which can be turned on and off-->
+<div class="container">
+    <div class="modules">
+        <div class="module">
+            <span>Sanitairservice</span>
+            <!--The slider-->
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="module">
+            <span>Ontbijtservice</span>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="module">
+            <span>Afwasservice</span>
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="module"></div>
+        <div class="module"></div>
+        <div class="module"></div>
+        <div class="module"></div>
+    </div>
+
+    <!--Right box has places where notifications can be located-->
+    <div class="notifications">
+        <h2>Meldingen →</h2>
+        <div class="notification"></div>
+        <div class="notification"></div>
+        <div class="notification"></div>
+    </div>
+</div>
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script src="/src/modules/moduleAdmin.js"></script>
+</body>
+</html>
