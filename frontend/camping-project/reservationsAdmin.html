@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Reserveringen beheren</title>
+</head>
+<body>
+<div class="container">
+
+    <h1>Productenbeheer</h1>
+
+    <div class="tabs">
+        <button onclick="goToProducts()">Jouw producten</button>
+        <button class="active">Reserveringen</button>
+    </div>
+
+    <div class="content">
+
+        <div class="panel left">
+            <input
+                    type="text"
+                    id="search"
+                    placeholder="Zoeken op naam..."
+                    oninput="filterReservations()"
+            />
+
+            <ul id="reservationList"></ul>
+        </div>
+
+        <div class="panel right">
+            <h2>Reservation</h2>
+            <div id="reservationDetail">
+                <p>Selecteer een reservering</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="module" src="./src/layout/layout.js"></script>
+<script type="module" src="./src/design/themeLoader.js"></script>
+<script type="module" src="./src/reservationsAdmin.js"></script>
+</body>
+</html>

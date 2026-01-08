@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <title>Product huren</title>
+    <link rel="stylesheet" href="./public/styles/productDetail.css">
+</head>
+<body>
+
+<h1 id="productName"></h1>
+
+<img id="productImage" alt="" />
+
+<p id="productDescription"></p>
+<p><strong>Prijs:</strong> € <span id="price"></span> per dag</p>
+<p><strong>Beschikbaar:</strong> <span id="stock"></span></p>
+
+<hr>
+
+<h3>Reserveren</h3>
+
+<label>Startdatum</label>
+<input type="date" id="startDate">
+
+<label>Einddatum</label>
+<input type="date" id="endDate">
+
+<label>Aantal</label>
+<input type="number" id="amount" min="1">
+
+<button id="reserveBtn">Reserveer nu</button>
+
+<script type="module" src="./src/layout/layout.js"></script>
+<script type="module" src="./src/design/themeLoader.js"></script>
+<script type="module" src="./src/productPublicDetail.js"></script></body>
+</html>
+

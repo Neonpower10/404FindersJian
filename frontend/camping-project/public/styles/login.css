@@ -1,0 +1,87 @@
+.auth-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-box {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--text);
+    padding: 24px 20px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin: 0 0 12px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    background: white;
+    border: 1px solid var(--text);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+.showpass {
+    display: block;
+    text-align: left;
+    margin: 6px 0 10px;
+    font-size: 0.9rem;
+    color: var(--card-text);
+}
+
+.login-box button[type="submit"] {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 4px;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: 1px solid var(--text);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-box button[type="submit"]:hover {
+    filter: brightness(0.95);
+}
+
+#errorMsg {
+    min-height: 1.2em;
+    color: var(--danger);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.forgot-link,
+.back-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--card-text);
+    padding: 1px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.forgot-link:hover,
+.back-link:hover {
+    text-decoration: underline;
+}
