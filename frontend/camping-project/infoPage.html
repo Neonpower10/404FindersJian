@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg"/>
+    <title>Camping Info</title>
+    <link rel="stylesheet" href="../public/styles/infoPage.css" />
+</head>
+
+<body>
+    <main class="page-content">
+      <!-- 
+        Page Header
+        Displays the title and a short introduction about the camping.
+      -->
+      <header class="page-header">
+        <h1>Camping informatie</h1>
+        <p>Kleinschalige camping in de natuur, ideaal voor gezinnen en rustzoekers, blablabla meer tekst.</p>
+      </header>
+      <section class="info-grid">
+
+        <!-- 
+          General description of the camping.
+          Provides an overview of what visitors can expect.
+        -->
+        <article class="info-card">
+          <h2>Over de camping</h2>
+          <p id="about-text"></p>
+        </article>
+
+        <!-- 
+          Practical information
+          Lists important details such as address, opening hours, seasons, and contact info.
+        -->
+        <article class="info-card">
+            <h2>Praktische informatie</h2>
+                <ul class="info-list">
+                    <li><strong>Adres:</strong> <span id="address-text"></span></li>
+                    <li><strong>Openingstijden receptie:</strong> <span id="reception-text"></span></li>
+                    <li><strong>Seizoenen:</strong> <span id="seasons-text"></span></li>
+                    <li><strong>Contact:</strong> <span id="contact-text"></span></li>
+                </ul>
+        </article>
+
+        <!-- 
+          Facilities
+          Shows a list of available facilities at the camping.
+        -->
+        <article class="info-card">
+            <h2>Faciliteiten</h2>
+                <ul class="info-list" id="facilities-list"></ul>
+        </article>
+
+        <!-- 
+          House Rules
+          Displays rules that visitors should follow during their stay.
+        -->
+        <article class="info-card">
+            <h2>Huisregels</h2>
+                <ul class="info-list" id="rules-list"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="src/layout/layout.js"></script>
+    <script type="module" src="src/design/themeLoader.js"></script>
+    <script type="module" src="src/info/infoPage.js"></script>
+</body>
+</html>
+

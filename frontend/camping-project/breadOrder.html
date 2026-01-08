@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg"/>
+    <title>Broodjes Bestellen</title>
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="/public/styles/breadOrder.css" />
+</head>
+<body>
+<main>
+    <!-- Page Title Section -->
+    <section class="page-header">
+        <div class="page-header-inner">
+            <h1>Broodjes Bestellen</h1>
+            <p>Kies je favoriete broodjes en voeg ze toe aan je winkelwagen</p>
+        </div>
+    </section>
+
+    <!-- Main Content: Breads List and Cart -->
+    <section class="order-content">
+        <div class="order-container">
+            <!-- Breads List -->
+            <div class="breads-section">
+                <h2>Beschikbare Broodjes</h2>
+                <div id="breadsList" class="breads-grid">
+                    <!-- Breads will be loaded here -->
+                </div>
+                <p id="loadingText" class="loading-text">Broodjes worden geladen...</p>
+                <p id="errorText" class="error-text" style="display: none;">Er ging iets mis bij het laden van de broodjes.</p>
+            </div>
+
+            <!-- Shopping Cart -->
+            <div class="cart-section">
+                <h2>Winkelwagen</h2>
+                <div id="cartItems" class="cart-items">
+                    <p class="empty-cart">Je winkelwagen is leeg</p>
+                </div>
+                <div class="cart-total">
+                    <p><strong>Totaal: €<span id="cartTotal">0.00</span></strong></p>
+                </div>
+                <button id="checkoutBtn" class="btn-checkout" disabled>Bestellen</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Layout.js handles navbar and footer automatically -->
+<script type="module" src="/src/layout/layout.js"></script>
+<!-- Theme loader -->
+<script src="/src/design/themeLoader.js"></script>
+<!-- Bread Order Logic -->
+<script type="module" src="/src/modules/breadModule/breadOrder.js"></script>
+</body>
+</html>
+

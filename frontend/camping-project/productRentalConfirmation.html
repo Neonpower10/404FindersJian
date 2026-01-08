@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Productverhuur contactgegevens</title>
+    <link rel="stylesheet" href="public/styles/productRentalConfirmation.css">
+</head>
+<body>
+<header id="site-header"></header>
+
+<main class="main-content">
+    <h1>Productverhuur contactgegevens</h1>
+
+    <div class="confirmation-container">
+        <div class="contact-form-section">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="firstName">Voornaam</label>
+                    <input type="text" id="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Achternaam</label>
+                    <input type="text" id="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mailadres</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefoonnummer</label>
+                    <input type="tel" id="phone" required>
+                </div>
+            </form>
+        </div>
+
+        <div class="summary-section">
+            <h2>Samenvatting reservering</h2>
+            <div id="reservationSummary">
+                <!-- Summary will be loaded here -->
+            </div>
+            <div class="total-price">
+                <strong>Totale prijs: €<span id="totalPrice">0.00</span></strong>
+            </div>
+            <div class="action-buttons">
+                <button onclick="window.history.back()" class="btn-back">←</button>
+                <button onclick="window.submitReservation()" class="btn-reserve">Reserveer nu →</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script type="module" src="src/producten/productRentalConfirmation.js"></script>
+</body>
+</html>
+

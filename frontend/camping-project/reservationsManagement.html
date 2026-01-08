@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reserveringenbeheer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles/reservationsManagement.css">
+  </head>
+  <body>
+  <a href="dashboardAdmin.html" class="back-btn">← Terug naar dashboard</a>
+  <div class="main-content">
+  <div class="lijst">
+      <h2>Productenbeheer</h2>
+      
+      <!-- Tabs -->
+      <div class="tabs">
+        <a href="/productenManagement.html" class="tab-button">Jouw producten</a>
+        <a href="/reservationsManagement.html" class="tab-button active">Reserveringen</a>
+      </div>
+      
+      <input id="searchInput" type="text" placeholder="Zoeken op naam" class="search-input">
+      <div id="reservationsLijst"></div>
+      <p id="leegReservationsText" class="leeg">Geen reserveringen.</p>
+    </div>
+
+    <div class="details">
+      <h2>Reservering</h2>
+      <div id="reservationDetails">
+        <p class="leeg">Selecteer een reservering om details te bekijken.</p>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="src/layout/layout.js"></script>
+  <script type="module" src="src/design/themeLoader.js"></script>
+  <script type="module" src="src/producten/reservationsManagement.js"></script>
+  </body>
+</html>
+

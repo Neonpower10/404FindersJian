@@ -1,0 +1,77 @@
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.confirmation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-form-section, .summary-section {
+    background: var(--card-bg);
+    border: 1px solid var(--text);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--text);
+    border-radius: 8px;
+}
+
+.summary-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.summary-label {
+    font-weight: bold;
+}
+
+.total-price {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid var(--text);
+    font-size: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-back {
+    padding: 15px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--text);
+    border-radius: 8px;
+    cursor: pointer;
+    width: 60px;
+}
+
+.btn-reserve {
+    flex: 1;
+    padding: 15px;
+    background: var(--accent);
+    color: var(--accent-text);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,92 @@
+/* Styles for the bread orders admin page */
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters input {
+    padding: 5px 70px 5px 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 50px;
+    overflow-y: scroll;
+    height: 70vh;
+    border-style: solid;
+    border-width: thin;
+}
+
+.order-card {
+    background: var(--card-bg);
+    border-bottom: 5px solid rgb(213, 213, 213);
+    padding-bottom: 15px;
+}
+
+.actions {
+    margin-top: 10px;
+}
+
+.actions button {
+    padding: 5px 20px;
+}
+
+.deleteOrder {
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid black;
+    background: rgb(145, 73, 73);
+    color: white;
+}
+
+.deleteOrder:hover {
+    background: rgb(120, 60, 60);
+}
+
+.empty-message {
+    text-align: center;
+    padding: 40px;
+    color: var(--text);
+    font-size: 18px;
+}
+
+.error-message {
+    text-align: center;
+    padding: 40px;
+    color: red;
+    font-size: 18px;
+}
+
+
+.back-btn {
+    display: inline-block;
+    margin: 24px 32px 0;
+    padding: 10px 16px;
+    background: var(--card-bg);
+    color: var(--text);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.back-btn:hover {
+    background: var(--accent);
+    color: var(--accent-text);
+}

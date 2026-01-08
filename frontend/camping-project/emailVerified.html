@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg"/>
+    <title>E-mail Geverifieerd</title>
+    <link rel="stylesheet" href="/public/styles/accountRegister.css">
+    <style>
+        .success-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .success-icon {
+            font-size: 64px;
+            color: #27ae60;
+            margin-bottom: 20px;
+        }
+        .success-message {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .login-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .login-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body class="auth-body">
+
+<!-- NAVBAR -->
+<header id="site-header"></header>
+
+<!-- main -->
+<main class="auth-main">
+    <section class="login-container">
+        <div class="success-container">
+            <div class="success-icon">...</div>
+            <h2 class="success-message">Verifiëren...</h2>
+            <p>Bezig met verifiëren van je e-mailadres...</p>
+            <a href="src/accountLogin.html" class="login-button">Naar Inloggen</a>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer id="site-footer"></footer>
+
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script type="module" src="src/loginAndRegistration/verifyEmail.js"></script>
+</body>
+</html>
+
