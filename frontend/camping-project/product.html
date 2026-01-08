@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Product huren</title>
+</head>
+<body>
+
+<h1>Product</h1>
+
+<div id="product"></div>
+
+<h2>Huren</h2>
+
+<label>Startdatum:</label>
+<input type="date" id="start">
+
+<label>Einddatum:</label>
+<input type="date" id="end">
+
+<label>Aantal:</label>
+<input type="number" id="amount" value="1">
+
+<button onclick="rent()">Huur product</button>
+
+<p id="result"></p>
+
+<script src="js/api.js"></script>
+<script src="js/reservation.js"></script>
+</body>
+</html>

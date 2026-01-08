@@ -1,0 +1,238 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 32px 16px;
+    justify-content: space-around;
+}
+
+.progressSteps {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.progressSteps li {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    padding: 10px 20px;
+    border: 1px solid var(--text);
+    border-radius: 50px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-size: larger;
+}
+
+.progressSteps li.active {
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border-color: var(--text);
+}
+
+.progressSteps::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--text);
+    z-index: 0;
+}
+
+.step {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+}
+
+.step.show {
+    display: block;
+    opacity: 1;
+}
+
+.bookingOverview {
+    background-color: var(--card-bg);
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid var(--text);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+}
+
+.campingInfo {
+    border: 2px solid var(--text);
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.campingInfo p,
+.campingInfo h2,
+.bookingInfo p,
+.dateOfStay,
+.amountPeople,
+.bookingDetails h3,
+.costOverview h3,
+.costOverview h2,
+.campEq {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bookingDetails,
+.costOverview {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.8s ease-in-out;
+}
+
+.bookingDetails {
+    border-bottom: 1px solid var(--text);
+}
+
+
+.step.show .bookingDetails,
+.step.show .costOverview {
+    max-height: 500px;
+}
+
+.personDataForm {
+    display: grid;
+    width: 100%;
+    background-color: var(--card-bg);
+    color: var(--text);
+    border-radius: 30px;
+    border: 1px solid var(--text);
+}
+
+.personDataForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: var(--text);
+    font-size: 2em;
+}
+
+.personDataInput {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.placeDataInput {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.personDataInput input,
+.placeDataInput input {
+    margin-bottom: 5px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--text);
+    font-size: 1em;
+}
+
+.personDataInput label,
+.placeDataInput label {
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-size: 1em;
+}
+
+.askGender {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: row;
+    border: none;
+}
+
+.bookingConfirmation {
+    border-radius: 30px;
+    width: 100%;
+    background-color: var(--card-bg);
+    border: 1px solid var(--text);
+    flex-direction: column;
+}
+
+.bookingConfirmation p {
+    margin: 2px 5px 5px 20px;
+}
+
+.bookingConfirmation h2 {
+    margin: 20px 5px 10px 20px;
+}
+
+.bookingConfirmation.show {
+    display: flex;
+}
+
+.confirmationInfo {
+    border-bottom: 1px solid var(--text);
+}
+
+.confirmationPrice {
+    margin: 2px 5px 5px 20px;
+    font-size: 0.8em;
+}
+
+.nextBtn,
+.confirmBtn {
+    font-size: large;
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px auto;
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: 1px solid var(--text);
+    transition: font-size 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+    display: block;
+    width: 100%;
+}
+
+.nextBtn:hover,
+.confirmBtn:hover {
+    background-color: var(--accent);
+    color: var(--accent-text);
+    border: 1px solid var(--text);
+    cursor: pointer;
+    font-size: larger;
+}
+
+.amountPeople p {
+    margin-left: 0;
+}
+
+.campingImage {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.bookingForm {
+    width: 40%;
+}
+
+.infoOfCamping  {
+    width: 40%;
+    background-color: var(--card-bg);
+    border-radius: 30px;
+    border: 1px solid var(--text);;
+    max-height: 600px;
+    min-height: 600px;
+}
+
+.campingDesc {
+    text-align: center;
+}
