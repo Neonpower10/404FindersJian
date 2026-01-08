@@ -1,0 +1,71 @@
+classDiagram
+    %% ===== DOMAIN =====
+    class Registration {
+        + int registrationId
+        + String name
+        + String surname
+        + String email
+        + String password
+    }
+
+    class Login {
+        + String email
+        + String password
+    }
+
+    %% ===== REPOSITORY =====
+    class RegistrationRepository {
+        + List~Registration~ getAll()
+        + Registration findById(int)
+        + Registration findByEmail(String)
+        + Registration findByEmailAndPassword(String, String)
+        + Registration add(Registration)
+        + Registration update(int, Registration)
+        + boolean delete(int)
+    }
+
+    %% ===== RESOURCES =====
+    class RegistrationResource {
+        + getAllRegistrations()
+        + getRegistration(id)
+        + addRegistration(Registration)
+        + updateRegistration(id, Registration)
+        + deleteRegistration(id)
+    }
+
+    class LoginResource {
+        + login(Login)
+    }
+
+    %% ===== FRONTEND =====
+    class register_js {
+        + validate()
+        + submitForm()
+        + sendToBackend()
+    }
+
+    class login_js {
+        + validate()
+        + submitLogin()
+        + sendToBackend()
+    }
+
+    class register_html {
+        + <form id="registerForm">
+    }
+
+    class login_html {
+        + <form id="loginForm">
+    }
+
+    %% ===== RELATIONSHIPS =====
+    RegistrationResource --> RegistrationRepository : "gebruikt"
+    LoginResource --> RegistrationRepository : "gebruikt"
+
+    RegistrationRepository --> Registration : "beheert"
+
+    register_js --> RegistrationResource : "POST /api/registrations"
+    login_js --> LoginResource : "POST /api/login"
+
+    register_html --> register_js : "stuurt events"
+    login_html --> login_js : "stuurt events"

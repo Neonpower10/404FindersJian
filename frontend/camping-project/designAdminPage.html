@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="icon" type="image/svg+xml" href="/public/icons/favicon.svg"/>
+    <title>Designbeheer</title>
+
+    <!--
+      Link to the external stylesheet that defines layout, color, and theme styles
+      for the design management interface.
+    -->
+    <link rel="stylesheet" href="./public/styles/designAdmin.css"/>
+</head>
+<body>
+<a href="dashboardAdmin.html" class="back-btn">← Terug naar dashboard</a>
+<div class="container">
+
+    <!--
+      Card: Theme Settings
+      Allows the user to choose a visual theme and apply it to the application.
+    -->
+    <div class="card">
+        <h2>Design instellingen</h2>
+        <p class="muted">Kies hieronder een thema om de kleuren van de applicatie aan te passen. De default en standard thema's kun je niet aanpassen of verwijderen. Wanneer je een thema of eigen design hebt gemaakt, herlaad te pagina om het resultaat te zien.</p>
+
+        <!--
+          Dropdown field for selecting a theme.
+          The values correspond to predefined themes in designAdmin.js.
+        -->
+        <div class="field">
+            <label for="themeSelector">Selecteer thema</label>
+            <select id="themeSelector">
+                <option value="default">Default</option>
+            </select>
+        </div>
+
+        <!--
+          Action buttons:
+          - Apply button triggers the theme change.
+          - Reset button reverts to the default theme.
+        -->
+        <div class="actions">
+            <button id="applyBtn" class="btn-primary">Thema toepassen</button>
+            <button id="deleteBtn" class="btn-danger">Verwijderen</button>
+        </div>
+    </div>
+
+    <!-- Card: Custom Theme Creation -->
+    <div class="card">
+        <h2>Eigen thema maken</h2>
+        <p class="muted">Maak je eigen thema met aangepaste kleuren.</p>
+
+        <div class="field">
+            <label for="customThemeName">Naam van thema</label>
+            <input type="text" id="customThemeName" placeholder="Bijv. pastelDreams" />
+        </div>
+
+        <div class="field">
+            <label for="customBgColor">Achtergrondkleur</label>
+            <input type="color" id="customBgColor" value="#ffffff" />
+        </div>
+
+        <div class="field">
+            <label for="customAccentColor">Accentkleur</label>
+            <input type="color" id="customAccentColor" value="#2563eb" />
+        </div>
+
+        <div class="field">
+            <label for="customCardColor">Kaartkleur</label>
+            <input type="color" id="customCardColor" value="#f8fafc" />
+        </div>
+
+        <div class="field">
+            <label for="customNavbarBg">Navigatiebalk kleur</label>
+            <input type="color" id="customNavbarBg" value="#2563eb" />
+        </div>
+
+        <div class="actions">
+            <button id="saveCustomThemeBtn" class="btn-primary">Opslaan als nieuw thema</button>
+            <button id="editThemeBtn">Huidig thema bewerken</button>
+            <button id="updateThemeBtn">Bewerkt thema opslaan</button>
+        </div>
+    </div>
+
+    <!--
+      Card: Theme Preview
+      Displays a live preview of the currently applied theme with buttons and text.
+    -->
+    <div class="card">
+        <h2>Voorbeeld</h2>
+        <p class="muted">Bekijk hier hoe jouw gekozen thema eruitziet:</p>
+        <div class="preview-box">
+            <button class="btn-primary">Primaire knop</button>
+            <button class="btn-ghost">Secundaire knop</button>
+            <p>Dit is een voorbeeld van tekstkleur en achtergrond.</p>
+        </div>
+    </div>
+
+</div>
+
+<!--
+  Toast notification element.
+  Displays short confirmation messages (e.g., when a theme is applied).
+-->
+<div id="toast" class="toast"></div>
+
+<!--
+  JavaScript file responsible for handling theme application logic,
+  saving preferences, and showing toast notifications.
+-->
+<script type="module" src="src/layout/layout.js"></script>
+<script type="module" src="src/design/themeLoader.js"></script>
+<script src="src/design/designAdmin.js"></script>
+</body>
+</html>

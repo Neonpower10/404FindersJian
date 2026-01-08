@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Brood Bestellingen</title>
+    <link rel="stylesheet" href="/styles/adminBreadOrders.css"/>
+</head>
+<body>
+<a href="dashboardAdmin.html" class="back-btn">← Terug naar dashboard</a>
+<div class="pageWrapper">
+    <main class="content">
+        <h1>Brood Bestellingen</h1>
+        <div class="filters">
+            <input type="text" id="search" placeholder="Zoek op naam..."/>
+        </div>
+        <div class="orders-list" id="orders-list">
+            <!-- Orders will be loaded here -->
+        </div>
+    </main>
+</div>
+</body>
+<script type="module" src="./src/layout/layout.js"></script>
+<script type="module" src="./src/design/themeLoader.js"></script>
+<script type="module" src="./src/breadOrder/adminBreadOrders.js"></script>
+</html>
+
