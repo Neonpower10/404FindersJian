@@ -1,0 +1,43 @@
+/* Make main content take up all available space */
+/* This pushes the footer to the bottom of the page */
+main {
+    flex: 1;
+}
+
+/* Footer styling */
+.footer {
+    background: var(--navbar-bg);
+    color: var(--navbar-text);
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    border-top: 1px solid var(--navbar-text);
+    /* This makes the footer stick to the bottom */
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+.footer a {
+    color: var(--navbar-text);
+    text-decoration: none;
+    margin: 0 6px;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: var(--navbar-text);
+    text-decoration: underline;
+}
+
+
+
+
