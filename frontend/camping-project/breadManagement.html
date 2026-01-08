@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Broodjesbeheer</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../public/styles/breadManagement.css">
+  </head>
+  <body>
+
+  <div class="lijst">
+      <h2>Broodjes</h2>
+      <input id="zoek" type="text" placeholder="Zoek broodje...">
+      <div id="broodjesLijst"></div>
+      <p id="leegText" class="leeg">Nog geen broodjes toegevoegd.</p>
+    </div>
+
+    <div class="formulier">
+      <h2 id="formTitel">Nieuw broodje</h2>
+      <form id="broodjeForm">
+        <input id="name" type="text" placeholder="Naam" required>
+        <input id="price" type="number" step="0.01" placeholder="Prijs" min="0" required>
+        <textarea id="description" placeholder="Beschrijving"></textarea>
+        <input id="image" type="file" accept="image/*">
+        <button type="submit" class="btn-primary" id="submitBtn">Toevoegen</button>
+      </form>
+    </div>
+  <script type="module" src="src/layout/layout.js"></script>
+  <script type="module" src="src/design/themeLoader.js"></script>
+  <script type="module" src="src/modules/breadModule/breadManagement.js"></script>
+  </body>
+</html>
