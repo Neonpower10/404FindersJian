@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Registreren</title>
+    <link rel="stylesheet" href="/public/styles/register.css">
+</head>
+<body>
+<!-- Hoofdinhoud -->
+<main class="login-container">
+    <div class="login-box">
+        <h2>Account aanmaken</h2>
+
+        <form id="registerForm" novalidate>
+            <!-- Surname -->
+            <input type="text" id="firstName" placeholder="Voornaam" required>
+            <br>
+
+            <!-- last name -->
+            <input type="text" id="lastName" placeholder="Achternaam" required>
+            <br>
+
+            <!-- E-mailadres -->
+            <input type="email" id="email" placeholder="E-mailadres" required>
+            <br>
+
+            <!-- password -->
+            <input type="password" id="password" placeholder="Wachtwoord (min. 6 tekens)" required>
+
+            <!-- repeat password -->
+            <input type="password" id="confirmPassword" placeholder="Herhaal wachtwoord" required>
+
+            <!-- show password -->
+            <label class="showpass">
+                <input type="checkbox" id="showPass"> Wachtwoord tonen
+            </label>
+
+            <!-- General terms -->
+            <label class="terms">
+                <input type="checkbox" id="acceptTerms"> Ik ga akkoord met de voorwaarden
+            </label>
+
+            <!-- send-button -->
+            <button type="submit">Account aanmaken</button>
+
+            <!-- error-message -->
+            <p id="errorMsg" aria-live="polite"></p>
+
+            <!-- Link back to login -->
+            <a class="back-link" href="/login.html">Heb je al een account? Log in</a>
+        </form>
+    </div>
+</main>
+<script src="src/themeLoader.js"></script>
+<script type="module" src="/src/register.js"></script>
+</body>
+</html>

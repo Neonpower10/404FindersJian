@@ -1,0 +1,68 @@
+/* basis */
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+/* layout */
+.login-container {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* box */
+.login-box {
+  background-color: lightgreen;
+  width: 280px;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+input {
+  width: 90%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input::placeholder { color: lightgray; }
+
+.showpass {
+  display: inline-block;
+  margin: 6px 0 12px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover { filter: brightness(0.95); }
+
+.forgot-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0b5ed7;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.forgot-link:hover { text-decoration: underline; }
+
+#errorMsg {
+  min-height: 1.2em;
+  color: #c62828;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}

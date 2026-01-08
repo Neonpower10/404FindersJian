@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+
+    <!-- Link to the page-specific CSS -->
+  <link rel="stylesheet" href="public/styles/login.css">  
+</head>
+<body>
+
+<!-- Main container for login content -->
+  <main class="login-container">
+
+      <!-- Centered login box -->
+    <div class="login-box">
+      <h2>Login</h2>
+
+        <!-- Login form (validated by JavaScript) -->
+      <form id="loginForm" novalidate>
+
+          <!-- Password field -->
+        <input type="text" id="username" placeholder="Username" required>
+        <br>
+
+          <!-- Password field -->
+        <input type="password" id="password" placeholder="Password" required>
+
+          <!-- Checkbox to toggle password visibility -->
+        <label class="showpass">
+          <input type="checkbox" id="showPass"> Wachtwoord tonen
+        </label>
+
+        <button type="submit">Login</button> <!-- Login button -->
+
+          <!-- Optional link to password reset page -->
+        <a href="/reset.html" class="forgot-link">Wachtwoord vergeten?</a>
+
+          <!-- Error message area (set by login.js) -->
+        <p id="errorMsg" aria-live="polite"></p>
+      </form>
+    </div>
+  </main>
+
+<!-- Import JavaScript logic for login -->
+<script src="src/themeLoader.js"></script>
+  <script type="module" src="/src/login.js"></script>
+</body>
+</html>

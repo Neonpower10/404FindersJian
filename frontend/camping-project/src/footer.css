@@ -1,0 +1,34 @@
+.footer {
+    background: #f8f9fa;         /* lichtgrijs voor een frisse look */
+    color: #333;                 /* neutrale tekstkleur */
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    border-top: 1px solid #ddd;  /* subtiele scheiding */
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+.footer a {
+    color: #0066cc;             /* frisse blauwe linkkleur */
+    text-decoration: none;
+    margin: 0 6px;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: #004999;             /* donkerdere tint bij hover */
+    text-decoration: underline;
+}
+
+
+
+
